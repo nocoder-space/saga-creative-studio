@@ -2,28 +2,28 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Check } from "lucide-react";
 import { SectionLabel } from "@/components/SectionLabel";
 import { SagaLines } from "@/components/SagaLines";
-import caseChicken from "@/assets/case-chicken.jpg";
-import p1 from "@/assets/portfolio-1.jpg";
-import p2 from "@/assets/portfolio-2.jpg";
-import p3 from "@/assets/portfolio-3.jpg";
+import casePhotocopy from "@/assets/case-photocopy.jpg";
+import p1 from "@/assets/print-1.jpg";
+import p2 from "@/assets/print-2.jpg";
+import p3 from "@/assets/print-3.jpg";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
       { title: "Portfolio — Saga Creative Agency" },
-      { name: "description", content: "Studi kasus dan karya pilihan Saga Creative untuk brand lokal & UMKM berkembang." },
-      { property: "og:title", content: "Portfolio Saga Creative" },
-      { property: "og:description", content: "Karya pilihan: branding, content, dan performance." },
-      { property: "og:image", content: caseChicken },
+      { name: "description", content: "Studi kasus Photocopy Pajajar — jasa fotocopy, printing & percetakan profesional di Bandung." },
+      { property: "og:title", content: "Portfolio Saga Creative — Photocopy Pajajar" },
+      { property: "og:description", content: "Karya pilihan: branding, content, dan performance untuk percetakan lokal." },
+      { property: "og:image", content: casePhotocopy },
     ],
   }),
   component: PortfolioPage,
 });
 
 const PROJECTS = [
-  { img: p1, tag: "Content", title: "Content shoot harian untuk brand UMKM" },
-  { img: p2, tag: "Branding", title: "Eksplorasi identitas visual brand baru" },
-  { img: p3, tag: "Production", title: "Behind the scene konten pemilik usaha" },
+  { img: p1, tag: "Print Collateral", title: "Brosur & kartu nama full color untuk UMKM" },
+  { img: p2, tag: "Large Format", title: "Cetak banner & spanduk format besar" },
+  { img: p3, tag: "Binding", title: "Cetak buku & jilid hardcover untuk kampus" },
 ] as const;
 
 function PortfolioPage() {
@@ -41,23 +41,24 @@ function PortfolioPage() {
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <div className="overflow-hidden rounded-2xl chamfer-bl border border-border">
-              <img src={caseChicken} alt="Ab Chicken Rajagaluh" className="h-[520px] w-full object-cover" width={1600} height={1200} />
+              <img src={casePhotocopy} alt="Photocopy Pajajar — studio fotocopy & printing di Bandung" className="h-[520px] w-full object-cover" width={1600} height={1200} />
             </div>
           </div>
           <div className="lg:col-span-5 flex flex-col justify-center">
             <span className="inline-flex w-fit items-center rounded-full bg-lime px-3 py-1 text-xs font-semibold uppercase tracking-widest text-lime-foreground">Featured Case</span>
-            <h2 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">Ab Chicken Rajagaluh</h2>
+            <h2 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">Photocopy Pajajar</h2>
             <p className="mt-4 text-muted-foreground">
-              Membangun kehadiran digital yang konsisten untuk brand kuliner lokal di Rajagaluh —
-              dari identitas visual, konten harian, hingga distribusi yang relevan dengan audiens lokal.
+              Jasa fotocopy, printing & percetakan profesional di Bandung. Saga Creative membantu membangun
+              identitas visual, konten promosi harian, dan distribusi yang relevan dengan audiens lokal —
+              dari mahasiswa, UMKM, hingga perusahaan dan sekolah.
             </p>
             <div className="mt-6">
               <span className="font-display text-xs font-semibold uppercase tracking-widest text-primary">Strategi</span>
               <ul className="mt-3 space-y-2 text-sm">
                 {[
-                  "Konten foto & video produk yang konsisten",
-                  "Copywriting + caption menjual",
-                  "Setup channel & distribusi konten lokal",
+                  "Konten foto produk hasil cetak yang konsisten",
+                  "Copywriting + caption menjual untuk paket print",
+                  "Setup channel & distribusi konten lokal Bandung",
                 ].map((b) => (
                   <li key={b} className="flex items-start gap-2"><Check className="mt-0.5 h-4 w-4 text-sage" /> {b}</li>
                 ))}
