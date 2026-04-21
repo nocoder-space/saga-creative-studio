@@ -6,7 +6,7 @@ import heroTeam from "@/assets/hero-team.jpg";
 import contentImg from "@/assets/service-content.jpg";
 import brandingImg from "@/assets/service-branding.jpg";
 import perfImg from "@/assets/service-performance.jpg";
-import caseChicken from "@/assets/case-chicken.jpg";
+import casePhotocopy from "@/assets/case-photocopy.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -212,27 +212,28 @@ function HomePage() {
       <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
         <SectionLabel>Featured Case</SectionLabel>
         <h2 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl max-w-3xl">
-          Studi kasus pilihan: <em className="not-italic text-sage">Ab Chicken Rajagaluh</em>.
+          Studi kasus pilihan: <em className="not-italic text-sage">Photocopy Pajajar</em>.
         </h2>
         <div className="mt-12 grid gap-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <div className="overflow-hidden rounded-2xl chamfer-bl border border-border">
-              <img src={caseChicken} alt="Ab Chicken Rajagaluh" className="h-[460px] w-full object-cover" loading="lazy" width={1600} height={1200} />
+              <img src={casePhotocopy} alt="Photocopy Pajajar — jasa fotocopy & printing di Bandung" className="h-[460px] w-full object-cover" loading="lazy" width={1600} height={1200} />
             </div>
           </div>
           <div className="lg:col-span-5 flex flex-col justify-center">
             <span className="inline-flex w-fit items-center rounded-full bg-lime px-3 py-1 text-xs font-semibold uppercase tracking-widest text-lime-foreground">
-              F&B / Local Brand
+              Printing / Local Service
             </span>
             <h3 className="mt-4 font-display text-2xl font-bold leading-tight">
-              Membangun kehadiran digital untuk brand kuliner lokal di Rajagaluh.
+              Membangun kehadiran digital untuk jasa fotocopy & percetakan di Bandung.
             </h3>
             <p className="mt-4 text-muted-foreground">
-              Dari identitas visual yang konsisten, konten harian yang menjual, hingga
-              strategi distribusi konten yang relevan dengan audiens lokal.
+              Dari identitas visual yang konsisten, konten promosi harian yang menjual, hingga
+              strategi distribusi konten yang relevan dengan audiens lokal — mahasiswa, UMKM,
+              perusahaan, hingga sekolah.
             </p>
             <ul className="mt-5 space-y-2 text-sm">
-              {["Konten foto & video produk", "Copywriting + caption menjual", "Strategi distribusi sosial media"].map((b) => (
+              {["Konten foto produk hasil cetak", "Copywriting + caption paket print", "Setup channel & distribusi lokal Bandung"].map((b) => (
                 <li key={b} className="flex items-start gap-2"><Check className="mt-0.5 h-4 w-4 text-sage" /> {b}</li>
               ))}
             </ul>
